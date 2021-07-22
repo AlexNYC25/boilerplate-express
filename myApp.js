@@ -1,5 +1,8 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 var app = express();
+
+bodyParser.urlencoded({ extended: false });
 
 console.log("Hello World");
 
