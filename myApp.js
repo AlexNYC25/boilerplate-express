@@ -4,7 +4,7 @@ var app = express();
 console.log("Hello World");
 
 app.use(function logger(req,res,next) {
-    console.log(req.method + " " + req.path + " " + req.ip);
+    console.log(req.method + " " + req.path + " - " + req.ip);
     next();
 });
 
