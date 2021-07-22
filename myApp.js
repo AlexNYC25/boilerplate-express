@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
 
-bodyParser.urlencoded({ extended: false });
+app.use(bodyParser.urlencoded({ extended: false }));
 
 console.log("Hello World");
 
@@ -53,6 +53,13 @@ app.get("/name", function(req, res) {
         "name": req.query.first + " " + req.query.last
     });
 })
+
+app.post("/name", function(req, res) {
+    res.json({
+        "name": req.body.first + " " + req.body.last
+    });
+})
+
 
 
 
